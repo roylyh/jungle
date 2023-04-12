@@ -40,7 +40,6 @@ RSpec.describe Product, type: :model do
       @product.quantity = 10
       @product.save
       expect(@product.errors).not_to be_empty
-      p @product.errors.full_messages
       expect(@product.errors.full_messages).to include "Price cents can't be blank"
     end
 
